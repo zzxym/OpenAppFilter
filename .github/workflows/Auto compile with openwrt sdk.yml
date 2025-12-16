@@ -10,6 +10,8 @@ on:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
+  push:
+    branches: [ master ]
 env:
   TZ: Asia/Shanghai
   openappfilter: zzxym/OpenAppFilter
