@@ -154,12 +154,12 @@ jobs:
           echo "CONFIG_LUCI_LANG_zh-cn=y" >> .config
           echo "CONFIG_PACKAGE_luci-app-oaf=m" >> .config
           echo "CONFIG_PACKAGE_appfilter=m" >> .config
-          echo "CONFIG_PACKAGE_kmod-oaf=m" >> .config
+          echo "CONFIG_PACKAGE_oaf=m" >> .config
           make defconfig
-          echo "make package/luci-app-oaf/compile package/appfilter/compile package/kmod-oaf/compile -j$(nproc)"
-          make package/luci-app-oaf/{clean,compile} package/appfilter/{clean,compile} package/kmod-oaf/{clean,compile} -j$(nproc) V=s
+          echo "make package/feeds/openappfilter/luci-app-oaf/compile package/feeds/openappfilter/appfilter/compile package/feeds/openappfilter/oaf/compile -j$(nproc)"
+          make package/feeds/openappfilter/luci-app-oaf/{clean,compile} package/feeds/openappfilter/appfilter/{clean,compile} package/feeds/openappfilter/oaf/{clean,compile} -j$(nproc) V=s
           mkdir upload
-          find bin/packages -name "luci-app-oaf*.ipk" -o -name "luci-i18n-oaf-zh-cn*.ipk" -o -name "appfilter*.ipk" -o -name "kmod-oaf*.ipk" -exec cp {} upload/ \;
+          find bin/packages -name "luci-app-oaf*.ipk" -o -name "luci-i18n-oaf-zh-cn*.ipk" -o -name "appfilter*.ipk" -o -name "oaf*.ipk" -exec cp {} upload/ \;
           cd upload
           echo "status=success" >> $GITHUB_OUTPUT
           echo "FIRMWARE=$PWD" >> $GITHUB_ENV
