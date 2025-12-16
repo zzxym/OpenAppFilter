@@ -88,7 +88,7 @@ jobs:
       matrix:
         include:
           - platform: x86_64
-            url_sdk: https://downloads.openwrt.org/releases/24.10.4/targets/x86/64/openwrt-sdk-24.10.4-x86-64_gcc-13.3.0_musl.Linux-x86_64.tar.zst
+            url_sdk: https://downloads.openwrt.org/releases/22.03.5/targets/x86/64/openwrt-sdk-22.03.5-x86-64_gcc-11.2.0_musl.Linux-x86_64.tar.xz
             ver: "ipk_x86_64"
           - platform: arm_cortex-a53
             url_sdk: https://downloads.openwrt.org/releases/22.03.5/targets/armvirt/64/openwrt-sdk-22.03.5-armvirt-64_gcc-11.2.0_musl.Linux-x86_64.tar.xz
