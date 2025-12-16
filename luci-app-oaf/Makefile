@@ -11,5 +11,10 @@ LUCI_DEPENDS:=+appfilter +kmod-oaf +luci-compat
 PKG_NAME:=luci-app-oaf
 PKG_VERSION:=6.1.7
 PKG_RELEASE:=1
+
+# Enable i18n support
+PKG_LICENSE:=Apache-2.0
+PKG_MAINTAINER:=zzxym <zzxym@github.com>
+
 include $(TOPDIR)/feeds/luci/luci.mk
 # call BuildPackage - OpenWrt buildroot signature
